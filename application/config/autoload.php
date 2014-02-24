@@ -63,8 +63,8 @@ $autoload['libraries'] = array('settings', 'event', 'events');
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-
-$autoload['helper'] = array('url', 'form', 'dump_variable', 'language', 'date');
+// CHANGED - load admin helper
+$autoload['helper'] = array('url', 'form', 'dump_variable', 'language', 'date','admin');
 
 
 /*

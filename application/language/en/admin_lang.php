@@ -4,6 +4,336 @@
 | Ionize Backend Language file
 |--------------------------------------------------------------------------
 */
+/*
+|--------------------------------------------------------------------------
+|           My custom backend lang keys
+| Search Note:
+|   CHANGED NOTE FINDME my backend lang entries
+|--------------------------------------------------------------------------
+*/
+
+
+/*
+|--------------------------------------------------------------------------
+| Global Messages
+|--------------------------------------------------------------------------
+*/
+$lang['my_lang_failure'] = 'Operation Failed';
+$lang['my_lang_noaccess'] = 'Access Denied';
+$lang['my_lang_ensure'] = 'Ensure you have the privalages to commit this action';
+$lang['my_lang_privlages'] = 'Incorrect Privilages';
+$lang['my_lang_auth_denied_OLD'] = $lang['my_lang_noaccess'] . ' - ' . $lang['my_lang_ensure'];
+$lang['my_lang_auth_denied'] = $lang['my_lang_noaccess'] . ' - ' . $lang['my_lang_privlages'];
+
+
+$lang['my_help_environment_flag'] = 'This servers ENVIRONMENT is set to <b>%s</b>. <br/>This affects the behaivour of both the Frontend and Backend';
+
+
+
+$lang['my_confirm_item_status_switch'] = "Switch this items 'online/offline' status?";//'offline' pages can only be viewed by logged in users (see Help Files).
+$lang['my_confirm_article_status_switch'] = "Switch this Articles 'online/offline' status?";
+$lang['my_confirm_page_status_switch'] = "Switch this Pages 'online/offline' status?";
+$lang['my_confirm_unlink_item'] = "Unlink this item?";
+$lang['my_confirm_detach_all_media_of_type'] = "Confirm to detach of media of type : ";
+$lang['my_confirm_detach_media'] = "Confirm to detach this media item";
+$lang['my_confirm_delete_article'] = "Do you want to definitely delete this element ? 
+<br/><br/>
+<img  src=\"".theme_url()."images/icon_16_alert.png\" /> <strong>WARNING</strong>
+<br/>This will PERMANENTLY delete this content. 
+<br/>For Articles please use \"unlink\" if unsure
+<br/>(see Help Files->Articles)
+<br/><br/>
+";
+$lang['my_confirm_delete_element'] = "Do you want to definitely delete this element ? <br/><br/>
+<img  src=\"".theme_url()."images/icon_16_alert.png\" /> <strong>WARNING</strong>
+<br/>This will PERMANENTLY delete this content.
+<br/><br/>
+";
+
+$lang['my_confirm_drop_element'] = "Are you sure? this will also delete all children...<br/><br/>
+<img  src=\"".theme_url()."images/icon_16_alert.png\" /> <strong>WARNING</strong>
+<br/>This will PERMANENTLY delete both this item AND all child articles & pages.
+<br/>USE WITH CAUTION!!!
+<br/><br/>
+";
+
+$lang['my_confirm_delete_help_group'] = "Are you wish to delete this Topic Group?";
+$lang['my_confirm_delete_help_topic'] = "Are you wish to delete this Help Topic?";
+
+
+
+$lang['my_instructions'] = 'Please hover over each label for more info.';
+$lang['my_instructions_content_element'] = $lang['my_instructions'];
+$lang['my_instructions_content_element_link'] = 'This allows you to add a link to internal or external content.<br/>'.$lang['my_instructions_content_element'];
+$lang['my_instructions_content_element_video-thumb'] = 'This provides a link to this video for the video-tour page.<a class="a-help help" title="See Help Files->Videos for more info on the Video Tour page and linking playlists to videos.">[?]</a> <br/>'.$lang['my_instructions_content_element'].' ';
+$lang['my_instructions_content_element_download-link'] = 'This provides a link to a hosted or external file.<br/>'.$lang['my_instructions_content_element'];
+$lang['my_instructions_content_element_page-banner-info'] = 'This allows some control over the display options for this banner.<br/>'.$lang['my_instructions_content_element'];
+$lang['my_instructions_content_element_slide-info'] = 'This provides some options to customize what is shown on this slide.<br/>'.$lang['my_instructions_content_element'];
+
+
+$lang['my_redirects_title'] = 'List and Modify URL Redirect Rules';
+$lang['my_redirects_nav_text'] = "URL's and Redirects";
+
+$lang['my_htmlvc_title'] = 'Manage Static HTML Versions of Pages';
+$lang['my_htmlvc_nav_text'] = "HTML Version Control";
+
+$lang['my_datasync_title'] = "Synchronise Content Across Multiple Servers";
+$lang['my_datasync_nav_text'] = "Data Synchronisation";
+
+$lang['my_list_articles_title'] = "Searchable list of Articles";
+$lang['my_list_articles_nav_text'] = "Articles List";
+
+$lang['my_list_pages_title'] = "Searchable list of Pages";
+$lang['my_list_pages_nav_text'] = "Pages List";
+
+$lang['my_list_elements_title'] = "Searchable list of Content Elements";
+$lang['my_list_elements_nav_text'] = "Elements";
+
+$lang['my_list_translations_title'] = "Static Translations List";
+$lang['my_list_translations_nav_text'] = "Translations";
+
+$lang['my_categories_title'] = "Categories can be applied to Articles";
+$lang['my_categories_nav_text'] = "Categories";
+
+
+
+
+
+
+
+$lang['my_message_operation_ok'] = "Operation OK";
+
+$lang['my_message_source_destination_database_not_different'] = 'Source and destination Database must be different!';
+
+
+$lang['my_label_page_filter'] = "Filter Pages";
+$lang['my_help_page_filter'] = 'Filter Pages (simple text contents only)';
+
+//$lang['my_sub_open'] = '<span class="my_label_sub lite">';
+//$lang['my_note_article_title_sub'] = $lang['my_sub_open'].'Article Header</span>';
+
+
+
+$lang['my_note_article_title_sub'] = ' ';
+$lang['my_note_article_subtitle_sub'] = ' ';
+$lang['my_note_article_url_sub'] = ' ';
+$lang['my_note_article_window_title_sub'] = ' ';
+
+//$lang['my_label_title'] = '<span class="my_label_second_row">(Article Header)</span>Title';
+//$lang['my_label_title'] = 'Title <span class="">(Article Header)</span>';
+$lang['my_label_title'] = 'Title';
+$lang['my_label_subtitle'] = 'Subtitle';
+//$lang['my_label_title'] = 'Title (Header)';
+//$lang['my_label_subtitle'] = 'Subtitle (Sub-Header)';
+$lang['my_blog_label_title'] = 'Title (Post Header)';
+// $lang['my_label_url'] = 'URL';
+
+$lang['my_help_article_title'] = "Used as a header, if applicable (see instructions)";
+$lang['my_help_article_subtitle'] = "Used as a sub-header, if applicable (see instructions)";
+$lang['my_help_article_url'] = "For Articles, this should match the English Title";
+$lang['my_help_article_window_title'] = "Title of the browser window, used only in certain circumstances";
+$lang['my_blog_help_article_title'] = "Used as a header for this post, both in the frontend as well as in the feed (including emails)";
+$lang['my_blog_help_article_url'] = "The unique uri for viewing this article online. Should be the same as the English Title (but with url-safe characters)";
+
+$lang['my_video_desc_label_title'] = 'Title (Video Title)';
+$lang['my_video_desc_help_article_title'] = "Used as the title for this video whenever played (as opposed to the thumbnail title - which is only used for that thumbnail)";
+
+
+$lang['my_label_editable_lang'] = 'Editable Language';
+$lang['my_label_editable_lang_short'] = 'Editable Lang.';
+$lang['my_default_editable_lang'] = '(ALL) No Restrictions';
+$lang['my_help_editable_lang'] = 'If Editor: this limits the languages which they can edit/save. <br/>If Admin: this has no effect';
+$lang['my_help_editable_lang_short'] = 'Editable Language: only affects Editors';
+
+$lang['my_label_overwrite_content'] = 'Overwrite Existing?';
+$lang['my_help_overwrite_content'] = "Overwrite existing content for this language? (USE WITH CAUTION)";
+$lang['my_message_confirm_copy_overwrite_whole_content'] = "Do you really want to copy the whole content to this language? 
+<br/><br/>
+<img  src=\"".theme_url()."images/icon_16_alert.png\" /> <strong>WARNING</strong>
+<p>
+As you have checked 'overwrite' you will lose all existing content for the destination language.
+</p>
+<p>
+Be absolutely sure before using this option, as well as make sure to backup your database.
+</p><br/>";
+
+$lang['my_message_confirm_delete_htmlvc_warning'] = " 
+<br/><br/>
+<img  src=\"".theme_url()."images/icon_16_alert.png\" /> <strong>WARNING</strong>
+<p>
+This action will delete all html versions for all languages, remember you can use 'preview' to see new content without deleting
+</p>
+<br/>";
+
+$lang['my_help_orphan_article_edit_icon'] = "Read Only: Cannot edit an article without context";
+$lang['my_help_orphan_article_edit_title'] = "Read Only: Cannot edit an article without context. <br/>Contact Admin if you believe this Article's orphan status is in error and should really be displayed.";
+
+
+$lang['my_label_collapse_all'] = 'Collapse All';
+$lang['my_label_expand'] = 'Expand';
+$lang['my_label_expand_all'] = 'Expand All';
+$lang['my_label_collapse_expand'] = 'Expand / Collapse';
+
+
+$lang['my_note_article_list'] = 'IMPORTANT: Content elements do not generate warnings when left un-translated';
+$lang['my_note_not_set'] = 'Not Set';
+$lang['my_note_offline_for_lang'] = "Warning: This means it is hidden on the frontend when viewing in this language (except when logged in, see Help Files->'Offline/Online')";
+//$lang['my_note_offline_for_lang_pre'] = "Warning: Turning this off hides this Article when public users view the ";
+//$lang['my_note_offline_for_lang_post'] = " version of the frontend. (see Help Files)";
+$lang['my_note_seo_tab'] = '<span class="lite my_note_seo_tab">Warning: Only edit these fields if content already exists</span>';
+$lang['my_note_uneditable_content'] ='<span class="my_note_uneditable_lang"><img class="" src="'.theme_url().'images/icon_16_alert.png" /> Read Only Privilages: No changes to the following fields will be saved</span><br/>';
+
+$lang['my_note_uneditable_content_media'] = '<span class="my_note_uneditable_lang_media"><img class="" src="'.theme_url().'images/icon_16_alert.png" /> Read Only Privilages: No changes to the following fields will be saved</span><br/>';
+$lang['my_note_uneditable_lang'] = '<span class="my_note_uneditable_lang"><img class="" src="'.theme_url().'images/icon_16_alert.png" /> Read Only Privilages: No changes to this language\'s fields will be saved</span><br/>';
+$lang['my_note_uneditable_lang_element'] = '<span class="my_note_uneditable_lang_element"><img class="" src="'.theme_url().'images/icon_16_alert.png" /> Read Only Privilages: No changes to this language\'s fields will be saved</span>';
+$lang['my_note_uneditable_lang_media'] = '<span class="my_note_uneditable_lang_media"><img class="" src="'.theme_url().'images/icon_16_alert.png" /> Read Only Privilages: No changes to this language\'s fields will be saved</span>';
+
+$lang['my_note_uneditable_lang_swap'] ='<span class="my_note_uneditable_lang"><img class="" src="'.theme_url().'images/icon_16_alert.png" /> Read Only: Cannot edit \'%s\' (%s). Only changes to \'%s\' (%s) will be saved.</span><br/>';
+
+$lang['my_help_article_list_content_header'] = "Warning: Does not always account for attatched elements and media. See 'About This Page'";
+$lang['my_note_articles_list_page'] = 
+    '<span class="my_note_articles_list_page">
+    Note that "Content" flags do NOT always account properly for translatable content within attatched media and content elements.
+    <br/>You should always ensure you check all Articles and Pages, easily accessible by using the sidebar (click "expand all").
+    </span>';
+/*
+    This page provides a list of all Articles with some feedback given regarding translated content.
+    <br/>However, these "missing translation" flags do NOT allows account properly for attatched media and content elements.
+    <br/>Please ensure you checkoff all Articles and Pages using the sidebar (use "expand all"). 
+    <br/>See the the Help Files for more info and some tips.
+
+*/
+
+
+$lang['my_trace_linebreak'] = '______________________________________________________________________________________________';
+$lang['my_hidden_field_css'] = ' style="visibility:hidden;position:absolute" ';
+$lang['my_readonly_attribute'] = ' readonly="readonly" ';
+$lang['my_disabled_attribute'] = ' disabled="disabled;" ';
+$lang['my_readonly_css'] = ' style="border:none;" ';
+
+
+
+$lang['my_help_link_topics'] = "Help Files";
+$lang['my_help_title_topics'] = "OneCNC.com Backend Help Files";
+$lang['my_help_title_manage'] = "Manage Backend Help Files Content";
+$lang['my_help_link_manage'] = "Manage Help Files";
+$lang['my_help_label_view_full_help'] = 'View All Help Files';
+
+
+
+// used to create help links, title becomes window title, link is link text
+$lang['my_label_help_link'] = "Help";
+
+$lang['my_label_help_article_list_page'] = "Articles List Screen";
+$lang['my_label_help_link_screen'] = "Help: Articles List Screen";
+$lang['my_label_help_link_screen_title'] = "Articles List (Screen)";
+
+$lang['my_label_help_title_content_elements'] = "Content Elements";
+$lang['my_label_help_link_content_elements'] = "Help";
+
+$lang['my_label_help_title_page_edit_screen'] = "Page Edit Screen";
+$lang['my_label_help_link_page_edit_screen'] = "Help: Page Edit Screen";
+
+$lang['my_label_help_title_article_edit_screen'] = "Article Edit Screen";
+$lang['my_label_help_link_article_edit_screen'] = "Help: Article Edit Screen";
+
+$lang['my_label_help_title_images_tab'] = "Media (Images)";
+$lang['my_label_help_link_images_tab'] = "Help: Media/Images";
+
+$lang['my_label_help_title_page_articles_tab'] = "Articles Tab (Page Edit Screen)";
+$lang['my_label_help_link_page_articles_tab'] = "Help: Articles Tab";
+
+$lang['my_label_help_title_article_types'] = "Article Types";
+$lang['my_label_help_link_article_types'] = "Help: Article Types";
+
+$lang['my_label_help_title_tinymce'] = "Text Editor (TinyMCE)";
+$lang['my_label_help_link_tinymce'] = "Help: Text Editor (TinyMCE)";
+
+$lang['my_label_help_title_translations'] = "Static Translations";
+$lang['my_label_help_link_translations'] = "Help: Static Translations";
+
+$lang['my_label_help_title_settings_website'] = "Website Settings (Screen)";
+$lang['my_label_help_link_settings_website'] = "Help: Website Settings (Screen)";
+
+
+$lang['my_label_help_page_list_screen'] = "Pages List (Screen)";
+$lang['my_label_help_link_page_list_screen'] = "Pages List (Screen)";
+
+
+$lang['my_label_help_element_list_screen'] = "Help: Content Elements List (Screen)";
+$lang['my_label_help_link_element_list_screen'] = "Content Elements List (Screen)";
+
+$lang['my_label_help_categories_title'] = "Categories (Articles)";
+$lang['my_label_help_categories'] = "Help: Categories";
+
+// my_label_help_htmlvc_sceen
+
+$lang['my_help_message_topic_saved'] = 'Help Topic saved';
+$lang['my_help_message_topic_not_saved'] = 'Help Topic not saved';
+$lang['my_help_message_topic_deleted'] = 'Help Topic Deleted';
+
+
+
+$lang['my_help_message_group_saved'] = 'Help Group saved';
+$lang['my_help_message_group_not_saved'] = 'Help Group not saved';
+$lang['my_help_message_group_deleted'] = 'Help Group Deleted';
+
+
+
+
+
+
+
+
+/// TODO IMPORTANT move these into DB - only keep generic lang terms
+$lang['my_help_category_title_article_list'] = "Article List Page";
+
+
+$lang['my_help_topic_title_article_list_page'] = 'Purpose ';
+$lang['my_help_topic_content_article_list_page'] = '<span class="help_topic">
+    <p>
+    This is a list of all Articles in this site, with some limited filtering functionality.
+    </p>
+    </span>';
+
+
+
+$lang['my_help_topic_title_article_list_page_location'] = 'Location ';
+$lang['my_help_topic_content_article_list_page_location'] = '<span class="help_topic">
+    <p>
+    This is access by the main menu, under "Content" click "Articles"
+    </p>
+    </span>'; 
+
+
+$lang['my_help_topic_title_article_list_pages_column'] = 'Pages Column';
+$lang['my_help_topic_content_article_list_pages_column'] = '<span class="help_topic">
+    <p>
+    This is a list of the pages this Article is attatched to. 
+    </p>
+    </span>'; 
+
+$lang['my_help_topic_title_article_list_orphaned_articles'] = 'Orphaned Articles';
+$lang['my_help_topic_content_article_list_orphaned_articles'] = '<span class="help_topic">
+    <p>
+    This term refers to Articles which are not attatched to any page. Admin users can move Articles to pages (where they can then edit them) but Editors cannot.
+    </p><p>
+    <b>Note:</b> You cannot edit "Orphan" Articles, if you wish to find out more about any please contact an Admin user.
+    </p>
+    </span>'; 
+    
+
+$lang['my_help_topic_title_article_list_content_column'] = 'Content Column';
+$lang['my_help_topic_content_article_list_content_column'] = '<span class="help_topic">
+    <p>
+    Note that "Content" flags do NOT allows account properly for translatable content within attatched media and content elements.
+    </p><p>
+    Please ensure you checkoff all Articles and Pages using the sidebar (use "expand all"). See the the Help Files for more info and some tips.
+    </p>
+    </span>'; 
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -97,7 +427,6 @@ $lang['ionize_menu_about'] = 'About';
 $lang['ionize_menu_documentation'] = 'Documentation';
 $lang['ionize_menu_extend_fields'] = 'Extend Fields';
 $lang['ionize_menu_content_elements'] = 'Content Elements';
-$lang['ionize_menu_static_items'] = 'Static Items';
 
 
 /*
@@ -194,41 +523,6 @@ $lang['ionize_message_element_definition_name_already_exists'] = 'Another Elemen
 $lang['ionize_title_element_field_new'] = 'New Element field';
 $lang['ionize_message_element_field_name_exists'] = 'This field already exists !';
 
-/*
-|--------------------------------------------------------------------------
-| Static Items
-|--------------------------------------------------------------------------
-*/
-$lang['ionize_title_static_items'] = 'Static Items';
-$lang['ionize_title_static_items_definitions'] = 'Definitions';
-$lang['ionize_title_new_definition'] = 'New Definition';
-$lang['ionize_title_edit_definition'] = 'Edit Definition';
-$lang['ionize_title_item_fields'] = 'Item fields';
-$lang['ionize_title_item_instances'] = 'Instances';
-$lang['ionize_title_item_field_new'] = 'New Item field';
-$lang['ionize_title_item_field_edit'] = 'Edit field';
-$lang['ionize_title_item_new'] = 'New item';
-$lang['ionize_title_edit_item'] = 'Edit Static Item';
-
-$lang['ionize_subtitle_static_item_list'] = 'Double clic on one item or drag it to the content panel to link it.';
-
-$lang['ionize_label_item_title_definition'] = 'Definition Title';
-$lang['ionize_label_item_title_definition_item'] = 'Instance Title';
-$lang['ionize_label_item_definition'] = 'Definition';
-$lang['ionize_label_item_add_item'] = 'Add Item';
-$lang['ionize_label_add_item'] = 'Add Item';
-
-$lang['ionize_help_definition_name'] = 'Code of this definition. Will be used to retrieve it with ionize tags. Must be unique';
-$lang['ionize_help_item_title_definition'] = 'How is called the definition of items ?';
-$lang['ionize_help_item_title_definition_item'] = 'How is called one item of this definition ?';
-$lang['ionize_help_item_field_display'] = 'This field value will be displayed as items title in content list of items (in page, articles, ...)';
-
-$lang['ionize_message_item_definition_already_exists'] = 'One definition with this name already exists';
-$lang['ionize_message_item_field_saved'] = 'Item field saved';
-$lang['ionize_message_item_field_not_saved'] = 'Item field not saved';
-$lang['ionize_message_static_item_intro'] = '<p>Static items give you ability to define kind of items and then, to create items based on these definitions.</p><p>These items will be available everywhere in your webapp and editors can link them to every content.</p>';
-$lang['ionize_title_static_item_intro'] = 'Define once, use everywhere !';
-
 
 /*
 |--------------------------------------------------------------------------
@@ -248,8 +542,6 @@ $lang['ionize_label_set_online'] = 'Set Online';
 $lang['ionize_label_edit'] = 'Edit';
 $lang['ionize_label_delete'] = 'Delete';
 $lang['ionize_label_unlink'] = 'Unlink';
-$lang['ionize_label_create'] = 'Create';
-$lang['ionize_label_new'] = 'New';
 $lang['ionize_label_status'] = 'Status';
 $lang['ionize_label_select_files_to_upload'] = 'Select files to Upload';
 $lang['ionize_label_select_file'] = 'Select File';
@@ -274,7 +566,6 @@ $lang['ionize_label_edit_flags'] = 'Edit flags';
 $lang['ionize_label_page'] = 'Page';
 $lang['ionize_label_article'] = 'Article';
 $lang['ionize_label_media'] = 'Media';
-$lang['ionize_label_medias'] = 'Medias';
 $lang['ionize_label_users'] = 'Users';
 $lang['ionize_label_user'] = 'User';
 $lang['ionize_label_table'] = 'Table';
@@ -597,9 +888,6 @@ $lang['ionize_label_maintenance_ips_help'] = 'The front-end website will be visi
 $lang['ionize_label_your_ip'] = 'your IP';
 $lang['ionize_label_maintenance_page_help'] = 'This page must be set before activating the maintenance mode in order to let Ionize build correctly the plain HTML page.';
 $lang['ionize_message_maintenance_page_curl_error'] = 'The cURL PHP extension needs to be installed';
-$lang['ionize_title_compress_html_output'] = 'Compress HTML Output';
-$lang['ionize_label_compress_html_output'] = 'Compress HTML Output';
-$lang['ionize_label_compress_html_output_help'] = 'To remove useless whitespace from generated HTML.';
 $lang['ionize_label_thumb_automatic'] = 'Automatic';
 $lang['ionize_label_files_path'] = 'Media base folder';
 $lang['ionize_label_media_type_picture'] = 'Images extensions';
@@ -846,12 +1134,11 @@ $lang['ionize_label_init_thumb'] = 'Init thumbnails';
 $lang['ionize_label_attach_media'] = 'Add Media';
 $lang['ionize_label_detach_media'] = 'Unlink media';
 $lang['ionize_label_delete_media'] = 'Delete media';
-$lang['ionize_label_remove_media'] = 'Remove media from DB (and links to pages, articles, etc.)';
+$lang['ionize_label_remove_media'] = 'Remove media';
 $lang['ionize_label_detach_all_pictures'] = 'Unlink all pictures';
 $lang['ionize_label_detach_all_videos'] = 'Unlink all videos';
 $lang['ionize_label_detach_all_musics'] = 'Unlink all music';
 $lang['ionize_label_detach_all_files'] = 'Unlink all files';
-$lang['ionize_label_detach_all'] = 'Unlink all';
 $lang['ionize_label_init_all_thumbs'] = 'Init all thumbs';
 $lang['ionize_label_copyright'] = 'Copyright';
 $lang['ionize_label_date'] = 'Date';
@@ -865,7 +1152,6 @@ $lang['ionize_label_add_video'] = 'Add Video URL';
 $lang['ionize_label_media_limit_display_to_lang'] = 'Limit display to';
 $lang['ionize_label_media_display_limited_to_lang'] = 'Display limited to';
 $lang['ionize_label_media_no_limit_display'] = 'No limit';
-$lang['ionize_label_media_size'] = 'Size';
 $lang['ionize_button_add_video'] = 'Add';
 $lang['ionize_message_please_save_first'] = 'Please save before adding media';
 $lang['ionize_message_media_not_authorized'] = 'Media type not authorized !';
@@ -876,7 +1162,6 @@ $lang['ionize_message_no_picture'] = 'No linked image';
 $lang['ionize_message_no_video'] = 'No linked video';
 $lang['ionize_message_no_music'] = 'No linked musice';
 $lang['ionize_message_no_file'] = 'No linked file';
-$lang['ionize_message_no_medias'] = 'No medias';
 $lang['ionize_message_media_not_detached'] = 'Media not unlinked';
 $lang['ionize_message_media_already_attached'] = 'Media already linked';
 $lang['ionize_message_media_data_saved'] = 'Media data saved';
@@ -884,7 +1169,6 @@ $lang['ionize_message_media_data_not_saved'] = 'Media data not saved';
 $lang['ionize_message_thumb_initialized'] = 'Thumbnail regenerated';
 $lang['ionize_message_media_reordered'] = 'Medias ordered';
 $lang['ionize_message_alt_desc_for_mp3'] = 'Because this media is an MP3, the following <strong>Description</strong> and the <strong>Alternative text</strong> are generated from MP3 file\'s ID3 tags.';
-$lang['ionize_message_paste_video_url'] = 'Copy and paste your Youtube, Vimeo or Dailymotion URL';
 // Exceptions
 $lang['ionize_exception_folder_creation'] = 'Error during folder creation';
 $lang['ionize_exception_no_thumbs_settings'] = 'Settings : No thumbnails defined!';
@@ -1039,8 +1323,6 @@ $lang['ionize_label_type_checkbox'] = 'Checkbox';
 $lang['ionize_label_type_radio'] = 'Radio';
 $lang['ionize_label_type_select'] = 'Select';
 $lang['ionize_label_type_datetime'] = 'Date & Time';
-$lang['ionize_label_type_media'] = 'Medias';
-$lang['ionize_label_filemanager_target'] = 'Destination';
 $lang['ionize_label_add_field'] = 'Add field';
 $lang['ionize_label_extend_field_for_all'] = 'Universal';
 $lang['ionize_label_extend_field_for_pages'] = 'Pages';
@@ -1060,7 +1342,6 @@ $lang['ionize_message_extend_field_saved'] = 'Extend Field saved';
 $lang['ionize_message_extend_field_not_saved'] = 'Error : Please enter a field name!';
 $lang['ionize_message_extend_field_deleted'] = 'Extend Field deleted';
 $lang['ionize_message_extend_field_not_deleted'] = 'Extend Field not deleted';
-$lang['ionize_message_extend_field_not_found'] = 'Extend Field not found';
 $lang['ionize_message_field_must_have_a_name'] = 'The field must have a name';
 $lang['ionize_message_varchar_int_must_have_length'] = 'VARCHAR or INT field must have a length';
 $lang['ionize_message_field_name_sql_reserved'] = 'The field name you choose is a SQL reserved word. Please change.';
@@ -1128,14 +1409,11 @@ $lang['ionize_message_module_not_installed'] = 'Module not installed !';
 | Admin : System Check
 |--------------------------------------------------------------------------
 */
-
-$lang['ionize_title_system_check'] = 'System Diagnosis Tool';
+$lang['ionize_title_system_check'] = 'System Diagnotic Tool';
 $lang['ionize_menu_sitemap'] = 'Site Map';
-$lang['ionize_menu_system_check'] = 'System Diagnosis';
+$lang['ionize_menu_system_check'] = 'System Diagnotic';
 $lang['ionize_text_system_check'] = 'These tools check the Ionize integrity and repair what should be. You cannot break anything by using them.';
 $lang['ionize_button_start_system_check'] = 'Start Check';
-$lang['ionize_button_check_uncheck_all'] = 'Check / Uncheck All';
-$lang['ionize_button_delete_selected_files'] = 'Delete selected files';
 $lang['ionize_title_check_element'] = 'Checked Element';
 $lang['ionize_title_check_result'] = 'Result';
 $lang['ionize_title_check_status'] = 'Status';
@@ -1150,15 +1428,13 @@ $lang['ionize_title_rebuild_articles_urls'] = 'Rebuild of Articles URLs';
 $lang['ionize_title_clean_media'] = 'Clean Media';
 $lang['ionize_title_check_reports'] = 'Reports';
 $lang['ionize_title_broken_media_links'] = 'Media broken links';
-$lang['ionize_title_unused_media_files'] = 'Unused Media Files';
 $lang['ionize_title_delete_thumbs'] = 'Delete thumbs';
 $lang['ionize_text_rebuild_urls'] = 'Rebuilds the whole pages and articles URLs.<br/> Removes the old URLs in the URL table.';
 $lang['ionize_text_check_lang'] = 'Check if all languages defined in DB are set in the config file.<br/> Corrects the config file if needed.';
 $lang['ionize_text_check_page_level'] = 'Checks the page level integrity and correct if needed.';
 $lang['ionize_text_check_article_context'] = 'Checks if all articles which have only one page context have the page as "Main Parent".<br/>Corrects if needed.';
-$lang['ionize_text_clean_media'] = 'Removes the non used medias from media tables. Does not remove any file.';
+$lang['ionize_text_clean_media'] = 'Removes the non used medias from media tables. Do not removes any media file.';
 $lang['ionize_text_broken_media_links'] = 'Lists the media files which are in media table (means used) but not found on the server (file missing).';
-$lang['ionize_text_unused_media_files'] = 'Lists the unused media files (physical files not in media table). <br/>Take care that some media can be used by your theme style before deleting them.<br/>Before removing files : <br/>1. Clean the media table from unused media with <b>Tools > System Diagnosis > Tools > Clean Media</b><br/>2. Create a backup of your <b>"files"</b> folder</b>';
 $lang['ionize_text_delete_thumbs'] = 'Deletes all the picture\'s thumbnails. The thumbnails will be created again once a visitor access the page using them';
 $lang['ionize_title_label_write_rights'] = 'Write rights';
 $lang['ionize_message_check_corrected'] = ' corrected.';
@@ -1167,7 +1443,6 @@ $lang['ionize_message_check_folder_nok'] = 'No Write rights';
 $lang['ionize_message_message_no_write_rights'] = 'No Write rights';
 $lang['ionize_message_nb_media_cleaned'] = ' media cleaned';
 $lang['ionize_message_no_broken_media_links'] = 'No broken media found';
-$lang['ionize_message_no_unused_media'] = 'No unused media found';
 $lang['ionize_message_thumbs_deleted'] = 'Thumbnails deleted';
 $lang['ionize_label_square_crop_area'] = 'Square crop area';
 $lang['ionize_label_top_left'] = 'top-left';
