@@ -3,6 +3,68 @@ ION.append({
 	grayPanels:Array('dashboard'),
 
 
+  // NOTE FINDME TODO IMPORTANT UNFINISHED - most of this help file code is still unpolished and can be optimized
+  // CHANGED NEW created my_initHelp function to handle help files, opens dataWindow containing help files content, optionally pointed at a single topic
+  my_initHelpTopic: function(selector)
+  {
+
+    $$(selector).each(function(item, idx)
+    {
+      ///console.debug('item '+selector,{item:item});
+
+      if(item.hasClass('inline_help_link') || !item.getProperty('rel')){ item.setProperty('rel',item.getProperty('href')).removeProperty('href');  }
+
+      item.removeEvents('click');
+      item.addEvent('click', function(e)
+      {
+        e.stop();
+        id_group = item.getProperty('rel');
+        var t = ((item.get('title') && item.get('title').trim() != '') ? item.get('title').trim() : ( (item.get('text') && item.get('text').trim() != '') ? item.get('text').trim() : id_group));
+        ION.my_openHelpFiles(id_group,t);
+        return false;
+      });
+    });
+  },
+
+  // CHANGED NEW opens the help files in the main panel
+  my_gotoHelpFiles: function(id_group)
+  {
+    var url =  this.adminUrl + 'help/open_full'+( (id_group) ? '/'+id_group : '');
+    ION.contentUpdate({element : 'mainPanel',url: url,title: Lang.get('my_help_title_topics')+' (Printable Version)'});
+  },
+
+  // CHANGED NEW opens help files in a dataWindow/modal
+  my_openHelpFiles: function(id_group,title,jump)
+  {
+    var url =  this.adminUrl + 'help/open'+( (id_group) ? '/'+id_group+( (jump) ? '/1' : '') : '');
+    if(!id_group) id_group = 'ALL';
+
+    /// console.debug('my_openHelpFiles',{id_group:id_group,title:title,jump:jump});
+
+    ION.dataWindow('help' + id_group, 'Help: '+title , url, {width:800, height:620}, {}); // 'regarding':id_group
+  },
+
+
+
+  // CHANGED simple update html content method, no url or ect
+  updateElementHtmlContent: function(dest,val,fallbackProp)
+  {
+    if(typeOf(dest) == 'string'){dest = $$(dest)}
+
+    dest.each(function(item){
+      /// console.debug('updateElementHtmlContent A ',{item:item,val:val,fallbackProp:fallbackProp});
+      if(val.trim() == ''){
+        item.addClass('lite').addClass('italic');
+        if(fallbackProp) val = item.getProperty(fallbackProp);
+      }
+      else
+        item.removeClass('lite').removeClass('italic');
+      /// console.debug('updateElementHtmlContent B ',{item:item,val:val,fallbackProp:fallbackProp});
+      item.set('html', val);
+    });
+    
+  },
+
 	contentUpdate:function(options)
 	{
 		var user = Ionize.User.getLoggedUser();

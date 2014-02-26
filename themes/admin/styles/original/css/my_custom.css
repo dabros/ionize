@@ -1,0 +1,24 @@
+.block{display:block;}
+.block-clear{display:block;clear:both;}
+.strong{font-weight:bold !important;}
+.center{text-align:center !important; margin:0 auto;}
+
+.semi-lite{ color:#666; }
+.semi-lite:hover{ color:#444; }
+.my-lite{color:#999 !important;}
+.my-lite:hover{color:#555 !important;}
+
+.lite-links a, a.lite-links{color:#39ADE7;}
+.my-lite.lite-links:hover a{color:#0B94D8;}
+.lite-links a:hover, a.lite-links:hover{color:#087FBA !important;}
+
+
+.icon.direction,   .button i.icon-direction   {background-position: -0px -156px;}
+.icon.printer,   .button i.icon-printer   {background-position: -18px -156px;}
+.icon.document_inspect,   .button i.icon-document_inspect   {background-position: -34px -156px;}
+.icon.zoom_layer,   .button i.icon-zoom_layer   {background-position: -52px -156px;}
+
+.toolbar-button.zoom-layer, .light-button.zoom-layer { background:url(../images/icon_16_zoom_layer.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.eye-open, .light-button.eye-open { background:url(../images/icon_16_eye_open.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.direction, .light-button.direction { background:url(../images/icon_16_direction.png) no-repeat 4px 50%; padding-left: 24px; }
+.toolbar-button.document-inspect, .light-button.document-inspect { background:url(../images/icon_16_document_inspect.png) no-repeat 4px 50%; padding-left: 24px; }

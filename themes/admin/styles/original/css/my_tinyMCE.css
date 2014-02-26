@@ -1,0 +1,528 @@
+/* This file extends the CSS data for the editable area(iframe) of TinyMCE 
+ *
+ * If you want to adds your own CSS classes in tinyMCE for one theme,
+ * copy this file to /Themes/your_theme/assets/css/tinyMCE.css
+ * and extend the copy with your classes
+ *
+ */
+
+/* Aligment of elements (like pictures)
+ * Your theme should have these CSS class set for the elements you wish to align through tinyMCE
+ * (tiny just adds the class to the element)
+ *
+ * Comment them in your /Themes/your_theme/assets/css/tinyMCE.css if you're not using them.
+ *
+ */
+
+
+/** CHANGED NOTE - an example of the TinyMCE styling i use, as of my latest push this is NOT linked being used */
+
+.__________STANDARD_CLASSES__________{}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.center{
+	text-align: center;
+}
+.justify {
+	text-align: justify;
+}
+.popup {}
+
+                        
+/* Standard Elements 
+ *
+ */
+body, td, pre, p, ul, ol {
+}
+
+body {
+}
+h2,h3,h4,h5,h6 {
+}
+ul, ol {
+}
+ul li, ol li {
+}
+li{
+  line-height:18px;
+  margin-top:5px;
+}
+a {
+}
+img {
+	border:1px solid #000;
+	margin:5px;
+}
+pre {
+	font-family: "Courier New", Courier, monospace;
+	border: solid 1px #ccc;
+	background-color:#f3f3f3;
+	padding:10px !important;
+
+}
+table.mceItemTable {
+	width: 100%;
+}
+
+table.mceItemTable td{
+  max-width:50%;
+  min-height:10px;
+}
+
+
+script {
+	border:solid dashed #000;
+}
+p:after{content:" ¶";color:#ccc}
+
+b, .bold, strong{
+	font-weight:bold !important;
+}
+
+i, .italic{
+  font-style: italic !important;
+}
+
+
+
+body{
+	font-size:12px;  font-weight:normal;  font-variant: normal;  font-style: normal;  
+  font-family:Arial, Helvetica, sans-serif; 
+	margin: 1em;
+	line-height:15px;
+}
+
+
+a, a:hover,
+a img, a:hover img,
+a:link, a:visited, a:active{
+	text-decoration:none ;  border:none ;
+}
+
+a{
+  color:#067BE6;  color:#066Bd6;  cursor:pointer;
+}
+a:link {
+}
+a:visited {
+}
+a:active {
+}
+a:hover {
+	color:#064bb6; 
+  color:#063ba6; 
+	text-decoration:underline ;
+}
+
+p{
+	text-align:left;  padding-left:1px;  font-size:12px;  font-family: Arial, Helvetica, sans-serif;  margin:10px 0 10px 0;
+} 
+h2 + p{
+	margin:5px 0 5px 0;
+}
+
+h3 + p{
+	margin:1px 0 5px 0;  padding-left:1px;
+}
+
+
+
+h1,h2,h3,h4,h5{
+	font-family:  Verdana, Geneva, sans-serif; /* 'Vollkorn','Droid Sans','Droid Serif',*/
+	color:#333;  font-weight:normal;
+	margin: 10px 0 0 0;
+}
+
+
+h1, h2, h3{
+  width:99.8%;  line-height:20px;  text-align:left;  margin-bottom:0px;  margin-top:10px;  padding:0;  padding-bottom:1px;  border-bottom:1px solid #CCC;
+}
+h1{
+  font-size:16px;
+}
+h2{
+  font-size:16px;  font-weight:normal;  font-style:none;  /* text-shadow:1px 0.5px #888; */
+}
+h3{ 
+  font-size:14px;  font-weight:400;  font-family:  Verdana, Geneva, sans-serif; /* 'Vollkorn','Droid Sans','Droid Serif',*/
+  border-bottom:none; color:#555;
+}
+h4, h5{
+  margin:8px 0 0;
+}
+ h4{font-size:15px;text-align:left;margin-top:12px}
+ h5{
+  color:#3F464A;
+  text-decoration: underline;
+  font-size:13px;text-align:left;font-family:Verdana, Geneva, sans-serif;margin-top:12px}
+ h4 + p{margin-top:4px}
+ h5 + p{margin-top:2px}
+
+
+ul, ol{
+  list-style-position: outside;
+}
+ ul{
+  margin-left:7px;
+}
+ ol{
+  margin-left:0px;
+}
+ ul li,
+ ol li{
+ margin-top:2px;
+}
+
+ ol li{
+  list-style:decimal;
+}
+
+ ul li{
+  list-style-position: outside;
+  margin-left:10px;
+  list-style-type:square;
+}
+
+
+/*
+table td, table th{
+	width:60px;
+	max-width: 60px;
+	padding:0;
+	margin:0;
+	height:18px;
+}
+
+*/
+
+
+
+
+
+
+
+/*
+ * CHANGED
+ * Include here styles with the SAME CLASS NAME as your main stylesheets.
+ * The actual styles can different but a referance needs to be here for 
+ * the tinyMCE editor to be able to use it.
+ */
+
+
+
+.__________IMAGE_CLASSES__________{}
+
+img.blog-img-fill-width{
+  width:520px !important;
+}
+
+      img.image-right{ float:right; margin:0 0 10px 10px; }
+      img.image-left{ float:left; margin:0 10px 10px 0; }
+
+img.image-right-rounded{  float:right; margin:0 0 10px 10px; }
+img.image-left-rounded{ float:left; margin:0 10px 10px 0; }
+img.image-right-rounded, img.image-left-rounded{ -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+
+
+
+.__________WIDTH_CLASSES__________{}
+
+.w250{ display:block; clear:none; width:250px !important; max-width:250px !important; min-width: 250px !important; }
+.w275{ display:block; clear:none; width:275px !important; max-width:275px !important; min-width: 275px !important; }
+.w300{ display:block; clear:none; width:300px !important; max-width:300px !important; min-width: 300px !important; }
+.w325{ display:block; clear:none; width:325px !important; max-width:325px !important; min-width: 325px !important; }
+.w350{ display:block; clear:none; width:350px !important; max-width:350px !important; min-width: 350px !important; }
+.w375{ display:block; clear:none; width:375px !important; max-width:375px !important; min-width: 375px !important; }
+.w400{ display:block; clear:none; width:400px !important; max-width:400px !important; min-width: 400px !important; }
+.w425{ display:block; clear:none; width:425px !important; max-width:425px !important; min-width: 425px !important; }
+.w450{ display:block; clear:none; width:450px !important; max-width:450px !important; min-width: 450px !important; }
+.w475{ display:block; clear:none; width:475px !important; max-width:475px !important; min-width: 475px !important; }
+.w500{ display:block; clear:none; width:500px !important; max-width:500px !important; min-width: 500px !important; }
+
+
+
+.__________TEXT_CLASSES__________{}
+
+
+.title{
+  font-family:'Droid Sans',Verdana, Geneva, sans-serif;  font-weight:bold;
+}
+.logo-text{
+  font-family:Verdana, Geneva, sans-serif !important; font-weight:700;
+}
+.title .logo-text{
+  color:#111;  font-weight:bold;
+}
+
+.font-size-15{ font-size:15px !important; }
+.font-size-16{ font-size:16px !important; }
+.font-size-17{ font-size:17px !important; }
+.font-size-18{ font-size:18px !important; }
+
+
+
+
+.red-text{color:#CC1F26 !important;}
+.dark-red-text{color:#A0181C !important}
+.blue-text{color:#067BE6 !important;  color:#064bb6 !important;}
+.white-text{color:#fff !important;}
+.black-text{color:#000 !important;}
+
+
+
+.slogon-line{
+  margin:0 !important;
+  padding:0 !important;
+  color:#111 !important;
+  border:none !important;
+  font-family: Verdana, Geneva, sans-serif !important;
+  margin:1px 0 3px 0 !important;
+  display:block;
+}
+
+
+
+.slogon-line-l{
+  font-size:35px !important;
+  line-height:35px !important;
+}
+
+.slogan-line-m{
+  font-size:20px !important;
+  line-height:20px !important;
+}
+
+
+.__________LIST_CLASSES__________{}
+
+      
+
+ul.styled-li-icons {
+  list-style-type:none;
+  margin:6px 0 2px;
+}
+
+
+ul.styled-li-icons li {
+  margin:2px 0;
+}
+
+ul.styled-li-icons li:before,
+.styled-li-icons ul li:before {
+ content: "\0BB \020";  font-size:13px;
+}
+
+.ie_lte_7 ul.styled-li-icons li:before,
+.ie_lte_7 .styled-li-icons ul li:before {
+ content: "";
+}
+.ie_lte_7 ul.styled-li-icons,
+.ie_lte_7 .styled-li-icons ul li {
+  list-style-type: square !important;
+}
+
+
+.__________TABLE_CLASSES__________{}
+
+ tbody td.cell-dark{
+  background-color:#aaa;
+}
+ tbody td.cell-half{
+  background-color:#ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[class^="gicon-"],
+[class*=" gicon-"] {
+  display: block;
+width: 14px;
+height: 14px;
+line-height: 14px;
+vertical-align: text-top;
+background-image: url("../images/_SPRITES/glyphs/glyphicons-halflings-black.png");
+background-position: 14px 14px;
+background-repeat: no-repeat;
+margin-right: 5px;
+margin-top: 1px;
+}
+}
+[class^="gicon-"]:last-child,
+[class*=" gicon-"]:last-child {
+  *margin-left: 0;
+}
+
+
+.gicon-white {background-image: url("../images/_SPRITES/glyphs/glyphicons-halflings-white.png");}
+.gicon-glass {background-position: 0      0;}
+.gicon-music {background-position: -24px 0;}
+.gicon-search {background-position: -48px 0;}
+.gicon-envelope {background-position: -72px 0;}
+.gicon-heart {background-position: -96px 0;}
+.gicon-star {background-position: -120px 0;}
+.gicon-star-empty {background-position: -144px 0;}
+.gicon-user {background-position: -168px 0;}
+.gicon-film {background-position: -192px 0;}
+.gicon-th-large {background-position: -216px 0;}
+.gicon-th {background-position: -240px 0;}
+.gicon-th-list {background-position: -264px 0;}
+.gicon-ok {background-position: -288px 0;}
+.gicon-remove {background-position: -312px 0;}
+.gicon-zoom-in {background-position: -336px 0;}
+.gicon-zoom-out {background-position: -360px 0;}
+.gicon-off {background-position: -384px 0;}
+.gicon-signal {background-position: -408px 0;}
+.gicon-cog {background-position: -432px 0;}
+.gicon-trash {background-position: -456px 0;}
+.gicon-home {background-position: 0 -24px;}
+.gicon-file {background-position: -24px -24px;}
+.gicon-time {background-position: -48px -24px;}
+.gicon-road {background-position: -72px -24px;}
+.gicon-download-alt {background-position: -96px -24px;}
+.gicon-download {background-position: -120px -24px;}
+.gicon-upload {background-position: -144px -24px;}
+.gicon-inbox {background-position: -168px -24px;}
+.gicon-play-circle {background-position: -192px -24px;}
+.gicon-repeat {background-position: -216px -24px;}
+.gicon-refresh {background-position: -240px -24px;}
+.gicon-list-alt {background-position: -264px -24px;}
+.gicon-lock {background-position: -287px -24px;}
+.gicon-flag {background-position: -312px -24px;}
+.gicon-headphones {background-position: -336px -24px;}
+.gicon-volume-off {background-position: -360px -24px;}
+.gicon-volume-down {background-position: -384px -24px;}
+.gicon-volume-up {background-position: -408px -24px;}
+.gicon-qrcode {background-position: -432px -24px;}
+.gicon-barcode {background-position: -456px -24px;}
+.gicon-tag {background-position: 0 -48px;}
+.gicon-tags {background-position: -25px -48px;}
+.gicon-book {background-position: -48px -48px;}
+.gicon-bookmark {background-position: -72px -48px;}
+.gicon-print {background-position: -96px -48px;}
+.gicon-camera {background-position: -120px -48px;}
+.gicon-font {background-position: -144px -48px;}
+.gicon-bold {background-position: -167px -48px;}
+.gicon-italic {background-position: -192px -48px;}
+.gicon-text-height {background-position: -216px -48px;}
+.gicon-text-width {background-position: -240px -48px;}
+.gicon-align-left {background-position: -264px -48px;}
+.gicon-align-center {background-position: -288px -48px;}
+.gicon-align-right {background-position: -312px -48px;}
+.gicon-align-justify {background-position: -336px -48px;}
+.gicon-list {background-position: -360px -48px;}
+.gicon-indent-left {background-position: -384px -48px;}
+.gicon-indent-right {background-position: -408px -48px;}
+.gicon-facetime-video {background-position: -432px -48px;}
+.gicon-picture {background-position: -456px -48px;}
+.gicon-pencil {background-position: 0 -72px;}
+.gicon-map-marker {background-position: -24px -72px;}
+.gicon-adjust {background-position: -48px -72px;}
+.gicon-tint {background-position: -72px -72px;}
+.gicon-edit {background-position: -96px -72px;}
+.gicon-share {background-position: -120px -72px;}
+.gicon-check {background-position: -144px -72px;}
+.gicon-move {background-position: -168px -72px;}
+.gicon-step-backward {background-position: -192px -72px;}
+.gicon-fast-backward {background-position: -216px -72px;}
+.gicon-backward {background-position: -240px -72px;}
+.gicon-play {background-position: -264px -72px;}
+.gicon-pause {background-position: -288px -72px;}
+.gicon-stop {background-position: -312px -72px;}
+.gicon-forward {background-position: -336px -72px;}
+.gicon-fast-forward {background-position: -360px -72px;}
+.gicon-step-forward {background-position: -384px -72px;}
+.gicon-eject {background-position: -408px -72px;}
+.gicon-chevron-left {background-position: -432px -72px;}
+.gicon-chevron-right {background-position: -456px -72px;}
+.gicon-plus-sign {background-position: 0 -96px;}
+.gicon-minus-sign {background-position: -24px -96px;}
+.gicon-remove-sign {background-position: -48px -96px;}
+.gicon-ok-sign {background-position: -72px -96px;}
+.gicon-question-sign {background-position: -96px -96px;}
+.gicon-info-sign {background-position: -120px -96px;}
+.gicon-screenshot {background-position: -144px -96px;}
+.gicon-remove-circle {background-position: -168px -96px;}
+.gicon-ok-circle {background-position: -192px -96px;}
+.gicon-ban-circle {background-position: -216px -96px;}
+.gicon-arrow-left {background-position: -240px -96px;}
+.gicon-arrow-right {background-position: -264px -96px}
+.gicon-arrow-up {background-position: -289px -96px;}
+.gicon-arrow-down {background-position: -312px -96px;}
+.gicon-share-alt {background-position: -336px -96px;}
+.gicon-resize-full {background-position: -360px -96px;}
+.gicon-resize-small {background-position: -384px -96px;}
+.gicon-plus {background-position: -408px -96px;}
+.gicon-minus {background-position: -433px -96px;}
+.gicon-asterisk {background-position: -456px -96px;}
+.gicon-exclamation-sign {background-position: 0 -120px;}
+.gicon-gift {background-position: -24px -120px;}
+.gicon-leaf {background-position: -48px -120px;}
+.gicon-fire {background-position: -72px -120px;}
+.gicon-eye-open {background-position: -96px -120px;}
+.gicon-eye-close {background-position: -120px -120px;}
+.gicon-warning-sign {background-position: -144px -120px;}
+.gicon-plane {background-position: -168px -120px;}
+.gicon-calendar {background-position: -192px -120px;}
+.gicon-random {background-position: -216px -120px;}
+.gicon-comment {background-position: -240px -120px;}
+.gicon-magnet {background-position: -264px -120px;}
+.gicon-chevron-up {background-position: -288px -120px;}
+.gicon-chevron-down {background-position: -313px -119px;}
+.gicon-retweet {background-position: -336px -120px;}
+.gicon-shopping-cart {background-position: -360px -120px;}
+.gicon-folder-close {background-position: -384px -120px;}
+.gicon-folder-open {background-position: -408px -120px;}
+.gicon-resize-vertical {background-position: -432px -119px;}
+.gicon-resize-horizontal {background-position: -456px -118px;}
+.gicon-hdd { background-position: 0 -144px; }
+.gicon-bullhorn { background-position: -24px -144px; }
+.gicon-bell { background-position: -48px -144px; }
+.gicon-certificate { background-position: -72px -144px; }
+.gicon-thumbs-up { background-position: -96px -144px; }
+.gicon-thumbs-down { background-position: -120px -144px; }
+.gicon-hand-right { background-position: -144px -144px; }
+.gicon-hand-left { background-position: -168px -144px; }
+.gicon-hand-up { background-position: -192px -144px; }
+.gicon-hand-down { background-position: -216px -144px; }
+.gicon-circle-arrow-right { background-position: -240px -144px; }
+.gicon-circle-arrow-left { background-position: -264px -144px; }
+.gicon-circle-arrow-up { background-position: -288px -144px; }
+.gicon-circle-arrow-down { background-position: -312px -144px; }
+.gicon-globe { background-position: -336px -144px; }
+.gicon-wrench { background-position: -360px -144px; }
+.gicon-tasks { background-position: -384px -144px; }
+.gicon-filter { background-position: -408px -144px; }
+.gicon-briefcase { background-position: -432px -144px; }
+.gicon-fullscreen { background-position: -456px -144px; }
+.gicon-chevron-2-right { background-position: 0px -168px; }
+.gicon-arrow-double-full-right { background-position: -24px -168px; }
+.gicon-chevron-thin-right { background-position: -48px -168px; }
+.gicon-small-play-1 { background-position: -72px -168px; }
+.gicon-small-play-2 { background-position: -96px -168px; }

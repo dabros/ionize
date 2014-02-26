@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="<?php echo admin_style_url(); ?>css/form.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo admin_style_url(); ?>css/content.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo admin_style_url(); ?>css/tree.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo admin_style_url(); ?>css/my_custom.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo admin_style_url(); ?>css/my_help.css" type="text/css" />
 
 <!--[if IE 7]><link rel="stylesheet" href="<?php echo admin_style_url(); ?>css/ie7.css" /><![endif]-->
 <!--[if IE 8]><link rel="stylesheet" href="<?php echo admin_style_url(); ?>css/ie8.css" /><![endif]-->

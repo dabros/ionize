@@ -459,7 +459,7 @@ class Help extends MY_Admin
         // $topics = $this->help_topic_model->get_lang_list();
       }
    // }
-    
+      
       if(!empty($topic))
       {
         $this->template['topic'] = $topic;

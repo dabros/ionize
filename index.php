@@ -272,6 +272,9 @@ if (defined('ENVIRONMENT'))
 	define('DOCPATH', $doc_path);
 
 
+  // CHANGED IMPORTANT - load chromephp
+  require_once BASEPATH.'../application/third_party/ChromePhp/ChromePhp.php';
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

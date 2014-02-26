@@ -1,0 +1,1 @@
+ERROR - 2014-02-26 02:30:54 --> Severity: Notice  --> Undefined property: Page::$settings_model C:\xampp\htdocs\onecnc\web\_TEMP\_IONIZE\ionize-1.0.5.2.merge\ionize\application\core\MY_Controller.php 84

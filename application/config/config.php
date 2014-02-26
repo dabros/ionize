@@ -243,7 +243,7 @@ $config['cache_path'] = FCPATH.'cache/';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = '5eJobeDY$OnolesoVOnEveDo5y@Yly7o';
 
 /*
 |--------------------------------------------------------------------------

@@ -139,6 +139,9 @@
 						<?php if(Authority::can('access', 'admin/settings/themes')) :?>
 							<li><a class="navlink" href="setting/themes" title="<?php echo lang('ionize_title_theme'); ?>"><?php echo lang('ionize_menu_theme'); ?></a></li>
 						<?php endif ;?>
+            <?php  if(TRUE) : // CHANGED - link to manage help files ?>
+              <li class='divider'><a class="navlink" href="help/manage" title="<?php echo lang('my_help_title_manage'); ?>"><?php echo lang('my_help_link_manage'); ?></a></li>
+            <?php /* */ endif ;   ?>
 						<?php if(Authority::can('access', 'admin/settings/website')) :?>
 							<li class="divider"><a class="navlink" href="setting" title="<?php echo lang('ionize_menu_site_settings'); ?>"><?php echo lang('ionize_menu_site_settings'); ?></a></li>
 						<?php endif ;?>
@@ -154,6 +157,12 @@
 					<?php if (is_dir(realpath(APPPATH.'../user-guide'))) :?>
 						<li><a id="docLink" href="../user-guide/index.html" target="_blank"><?php echo lang('ionize_menu_documentation'); ?></a></li>
 					<?php endif; ?>
+
+            <?php // CHANGED help files link code ?>
+            <li><a class='nav_view_help_files_link openAsModal' rel='32' title="<?php echo lang('my_help_title_topics'); ?>" id="" ><?php echo lang('my_help_link_topics'); ?></a></li>
+        
+            <li><a class='nav_view_help_files_link'  title="<?php echo lang('my_help_title_topics'); ?>" id="" ><?php echo lang('my_help_link_topics'); ?> (Printable)</a></li>
+       
 					<li<?php if (is_dir(realpath(APPPATH.'../user-guide'))) :?> class="divider"<?php endif; ?>><a id="aboutLink" href="<?php echo theme_url(); ?>views/about.html"><?php echo lang('ionize_menu_about'); ?></a></li>
 				</ul>
 			</li>
@@ -216,5 +225,17 @@
 		});
 	});
 	
+  // CHANGED help files link code
+  $$('.nav_view_help_files_link').addEvent('click', function(e){
+    e.stop();
+    if(this.hasClass('openAsModal')){
+      var item = this;
+      var t = ((item.get('text') && item.get('text').trim() != '') ? item.get('text').trim() : ( (item.get('title') && item.get('title').trim() != '') ? item.get('title').trim() : ''));
+      ION.my_openHelpFiles(item.getProperty('rel'),t);
+    }else{
+      ION.my_gotoHelpFiles();
+    }
+  });
+
 </script>
 
